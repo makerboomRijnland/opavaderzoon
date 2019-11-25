@@ -1,0 +1,9 @@
+<article class="opa">
+  <p>
+    Opa <span>{{persoon.naam}}</span> 
+    heeft <span>{{persoon.kinderen.length}}</span> kinderen 
+    en <span>{{kleinKinderen()}}</span> kleinkinderen.
+  </p>
+  <app-vader *ngFor="let vader of persoon.kinderen" [persoon]="vader" [opa]="persoon"></app-vader>
+
+</article>

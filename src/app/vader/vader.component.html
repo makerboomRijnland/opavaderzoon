@@ -1,0 +1,10 @@
+<article class="vader">
+    <p>
+        Vader <span>{{persoon.naam}}</span> 
+        heeft <span>{{persoon.kinderen.length}}</span> kinderen 
+        en is een kind van <span>{{opa.naam}}</span>
+    </p>
+    <app-zoon *ngFor="let zoon of persoon.kinderen" [persoon]="zoon" [vader]="persoon" [opa]="opa">
+
+    </app-zoon>
+</article>
